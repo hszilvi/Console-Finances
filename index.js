@@ -112,14 +112,9 @@ let averageChange = deltaSum / (finances.length -1);
 console.log(`Average Change: ${averageChange}`);
 
 //! #4 The greatest increase in Profit / Losses(date and amount) over the entire period.
-    //! create a variable to store the changes in Profit/Losses and push in all the changes to store in a new array
-let allChanges = [];
-  for (let i=1; i < finances.length; i++ ) {
-    let change = (finances[i][1] - finances[i-1][1]);
-      allChanges.push(change); 
-}
+    //! create a variable to store the changes in Profit/Losses and create a date to link to this change
     //! On each iteration, compare the current change in profits/losses
-    //! If the change is more, replace what's currently stored in the variable/ 
+    //! If the change is more, replace what's currently stored in the variable largestIncrease, else if it is smaller than store in the variable largestDecrease
     //! add the date to the largerst change
 
 // console.log(allChanges);
@@ -129,20 +124,18 @@ let largestIncreaseDate = finances[0][0];
 let largestDecrease = 0;
 let largestDecreaseDate = finances[0][0];
 
-for (let i= 0; i < allChanges.length; i++) {
-  if (allChanges[i] > largestIncrease) {
-    largestIncrease = allChanges[i];
+for (i = 1; i < finances.length; i++) {
+  let change = (finances[i][1] - finances[i-1][1]);
+  if (change > largestIncrease) {
+    largestIncrease = change;
     largestIncreaseDate = finances[i][0];
-  };
-};
-console.log(`Greatest Increase in Profit/Losses: ${largestIncrease}`);
-for (let i= 0; i < allChanges.length; i++) {
-  if (allChanges[i]  < largestDecrease) {
-    largestDecrease = allChanges[i];
+  } else if (change < largestDecrease) {
+    largestDecrease = change;
     largestDecreaseDate = finances[i][0];
-  };
-};
-console.log(`Greatest Decrease in Profit/Losses: ${largestDecrease}`);
+  }
+}
+console.log(`Greatest Increase in Profit/Losses: ${largestIncreaseDate} $${largestIncrease}`);
+console.log(`Greatest Decrease in Profit/Losses: ${largestDecreaseDate} $${largestDecrease}`);
 
 
 alert(`
