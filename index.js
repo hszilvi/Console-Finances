@@ -117,8 +117,6 @@ console.log(`Average Change: ${averageChange}`);
     //! If the change is more, replace what's currently stored in the variable largestIncrease, else if it is smaller than store in the variable largestDecrease
     //! add the date to the largerst change
 
-// console.log(allChanges);
-
 let largestIncrease = 0;
 let largestIncreaseDate = finances[0][0];
 let largestDecrease = 0;
