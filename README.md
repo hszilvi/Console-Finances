@@ -15,7 +15,7 @@
 In this challenge, I had a list of data and had to use for loop to depth my JavaScript skills. Using pseudocoding to build a step by step instruction to follow.
 
 ## Screenshots
-Console-Finances screenshot ![screen shot console](./Screenshot%202023-12-11%20112850.png)
+Console-Finances screenshot ![screen shot console](./assets/images/Screenshot%202023-12-11%20112850.png)
 
 # Links
 Console-Finances on github [https://github.com/hszilvi/Console-Finances]
